@@ -1,0 +1,20 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+
+# Node
+node_modules/
+dist/
+.env.local
+
+# SentinelAI runtime data
+.sentinelai/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,27 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Manrope", sans-serif;
+  --font-mono: "DM Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; font-family: var(--font-display); }
+button { cursor: pointer; }
+button:disabled { cursor: wait; opacity: .55; }
+.grid-bg { background-image: linear-gradient(rgba(167, 243, 208, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(167, 243, 208, .04) 1px, transparent 1px); background-size: 34px 34px; mask-image: linear-gradient(to bottom, black, transparent 70%); }
+.nav-item { display: flex; align-items: center; gap: .75rem; border-radius: .7rem; padding: .72rem .8rem; color: rgb(167 243 208 / .55); font-size: .875rem; transition: all .18s ease; }
+.nav-item:hover { background: rgb(110 231 183 / .08); color: rgb(236 253 245); }
+.nav-item-active { background: rgb(110 231 183 / .13); color: rgb(236 253 245); box-shadow: inset 2px 0 0 rgb(110 231 183); }
+.panel { border: 1px solid rgb(167 243 208 / .11); border-radius: 1.1rem; background: linear-gradient(145deg, rgb(13 38 29 / .84), rgb(7 22 16 / .78)); padding: 1.5rem; box-shadow: 0 18px 50px rgb(0 0 0 / .16); }
+.eyebrow { font-family: var(--font-mono); font-size: .63rem; text-transform: uppercase; letter-spacing: .18em; color: rgb(167 243 208 / .5); }
+.metric-card { display: flex; justify-content: space-between; border: 1px solid rgb(167 243 208 / .1); border-radius: 1rem; padding: 1.3rem; background: rgb(14 40 30 / .58); }
+.metric-card svg { opacity: .8; }.metric-emerald svg { color: #6ee7b7; }.metric-red svg { color: #fca5a5; }.metric-amber svg { color: #fcd34d; }
+.severity-dot { height: .55rem; width: .55rem; border-radius: 50%; }.severity-label { border-radius: 999px; padding: .25rem .55rem; font-family: var(--font-mono); font-size: .62rem; text-transform: uppercase; letter-spacing: .08em; }.severity-critical { background: rgb(248 113 113 / .14); color: #fca5a5; }.severity-high { background: rgb(251 191 36 / .14); color: #fcd34d; }.severity-medium { background: rgb(96 165 250 / .14); color: #93c5fd; }.severity-low { background: rgb(110 231 183 / .12); color: #6ee7b7; }
+.action-button { border: 1px solid rgb(110 231 183 / .35); border-radius: .55rem; background: rgb(110 231 183 / .11); padding: .55rem .75rem; color: #a7f3d0; font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; transition: all .18s ease; }.action-button:hover:not(:disabled) { border-color: rgb(110 231 183 / .7); background: rgb(110 231 183 / .2); color: #ecfdf5; }
+.input-field { width: 100%; border: 1px solid rgb(167 243 208 / .15); border-radius: .55rem; background: rgb(0 0 0 / .15); padding: .65rem .7rem; color: #ecfdf5; font-family: var(--font-mono); font-size: .72rem; outline: none; }.input-field::placeholder { color: rgb(168 162 158 / .45); }.input-field:focus { border-color: rgb(110 231 183 / .6); box-shadow: 0 0 0 3px rgb(110 231 183 / .08); }
+.technique-link { display: inline-flex; align-items: center; gap: .35rem; border: 1px solid rgb(110 231 183 / .18); border-radius: .45rem; padding: .35rem .45rem; color: #a7f3d0; font-family: var(--font-mono); font-size: .7rem; transition: background .18s ease; }.technique-link:hover { background: rgb(110 231 183 / .1); }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }.animate-rise { animation: rise .5s ease-out both; }.animate-rise-delay { animation: rise .5s .12s ease-out both; }.animate-rise-delay-2 { animation: rise .5s .22s ease-out both; }
+@media (max-width: 640px) { .panel { padding: 1.15rem; } }
+.auth-page { position: relative; display: grid; min-height: 100vh; place-items: center; overflow: hidden; background: #07130f; padding: 1.5rem; color: #f5f5f4; }.auth-card { position: relative; width: min(100%, 28rem); border: 1px solid rgb(167 243 208 / .13); border-radius: 1.25rem; background: rgb(8 26 20 / .86); padding: 2rem; box-shadow: 0 30px 80px rgb(0 0 0 / .35); backdrop-filter: blur(18px); }.auth-orb { position: absolute; border-radius: 999px; filter: blur(80px); }.auth-orb-one { top: -12rem; left: -8rem; height: 27rem; width: 27rem; background: rgb(16 185 129 / .18); }.auth-orb-two { right: -10rem; bottom: -15rem; height: 31rem; width: 31rem; background: rgb(245 158 11 / .1); }.auth-label { font-family: var(--font-mono); font-size: .65rem; text-transform: uppercase; letter-spacing: .12em; color: rgb(167 243 208 / .56); }
